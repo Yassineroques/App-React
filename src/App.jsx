@@ -1,5 +1,5 @@
 import PokemonCard from "./components/PokemonCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 
 const pokemonList = [
@@ -15,6 +15,9 @@ const pokemonList = [
 
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
+  useEffect(()=>{
+    window.alert("hello pokemon trainer :)")
+  }, [])
 
   const handleClickInc = () => {
     setPokemonIndex(pokemonIndex + 1);
